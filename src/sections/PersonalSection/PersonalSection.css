@@ -1,0 +1,139 @@
+.personal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  /* min-width: 600px; */
+  margin: 0 64px;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.personal-text {
+  flex: 1;
+}
+
+.personal-introduce {
+  font-size: 3.55em;
+  margin: 0 auto;
+}
+
+.personal-mb4 {
+  font-size: 1.35em;
+  margin: 0 auto;
+  line-height: 36px;
+}
+
+.personal-img {
+  flex: 1;
+  /* min-width: 480px; */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.personal-img img {
+  width: 500px; 
+  height: 600px; 
+  border-radius: 8px; 
+  object-fit: cover;
+  background: #eee;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .personal-content {
+    max-width: 100%;
+    margin: 0 32px;
+    gap: 4rem;
+  }
+  
+  .personal-introduce {
+    font-size: 2.8em;
+  }
+  
+  .personal-mb4 {
+    font-size: 1.2em;
+    line-height: 34px;
+  }
+  
+  .personal-img img {
+    width: 450px;
+    height: 540px;
+  }
+}
+
+@media (max-width: 900px) {
+  .personal-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    gap: 3rem;
+    min-width: auto;
+  }
+  
+  .personal-img {
+    order: -1; /* 图片放在文字上方 */
+    margin: 0 0 24px 0;
+  }
+  
+  .personal-text {
+    text-align: center;
+    padding-right: 0;
+    max-width: 100%;
+  }
+  
+  .personal-introduce {
+    font-size: 2.5em; /* 减小标题字体 */
+  }
+  
+  .personal-mb4 {
+    font-size: 1.1em;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-content {
+    margin: 0 15px;
+    gap: 2.5rem;
+  }
+  
+  .personal-introduce {
+    font-size: 2.2em;
+  }
+  
+  .personal-mb4 {
+    font-size: 1.05em;
+    line-height: 30px;
+  }
+  
+  .personal-img img {
+    width: 100%;
+    max-width: 400px;
+    height: 480px;
+  }
+}
+
+/* 添加小屏幕优化 */
+@media (max-width: 480px) {
+  .personal-content {
+    margin: 0 15px;
+    gap: 2rem;
+  }
+  
+  .personal-introduce {
+    font-size: 2em;
+  }
+  
+  .personal-mb4 {
+    font-size: 1em;
+    line-height: 28px;
+  }
+  
+  .personal-img img {
+    width: 100%;
+    max-width: 350px;
+    height: 450px;
+  }
+}

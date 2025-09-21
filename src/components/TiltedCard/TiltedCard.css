@@ -1,0 +1,121 @@
+/*
+	Installed from https://reactbits.dev/default/
+*/
+
+.tilted-card-figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%; 
+}
+
+.tilted-card-mobile-alert {
+  position: absolute;
+  top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  display: none;
+}
+
+.tilted-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  max-width: 100%; 
+}
+
+.tilted-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 15px;
+  will-change: transform;
+  transform: translateZ(0);
+  width: 100% !important; 
+  height: 100% !important; 
+  max-width: 100% !important; 
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  will-change: transform;
+  transform: translateZ(30px);
+  width: 100%;
+  height: 100%;
+}
+.tilted-card-demo-text {
+  color: black;
+}
+
+.tilted-card-caption {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: #2d2d2d;
+  opacity: 0;
+  z-index: 3;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .tilted-card-figure {
+    max-width: 200px;
+    max-height: 160px;
+    perspective: 500px;
+  }
+  
+  .tilted-card-mobile-alert {
+    display: block;
+    font-size: 0.75rem;
+  }
+  
+  .tilted-card-caption {
+    display: none;
+  }
+}
+
+/* 小手机端 */
+@media (max-width: 480px) {
+  .tilted-card-figure {
+    max-width: 180px;
+    max-height: 140px;
+    perspective: 400px;
+  }
+  
+  .tilted-card-mobile-alert {
+    font-size: 0.7rem;
+    top: 0.5rem;
+  }
+}
+
+/* 超小屏幕 */
+@media (max-width: 360px) {
+  .tilted-card-figure {
+    max-width: 160px;
+    max-height: 120px;
+    perspective: 300px;
+  }
+}
+
+/* 确保在容器中居中显示 */
+.tilted-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

@@ -1,0 +1,263 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 36px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;      
+  justify-content: space-between; 
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.55em;
+  font-weight: bold;
+  margin-right: 40px;
+  color: #111;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-logo-icon {
+  width: 32px;   
+  height: 32px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.nav-menu li {
+  margin: 0 18px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: color 0.2s;
+  display: inline-block; 
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 8px;
+  font-size: 1.55em;      
+  font-weight: bold;      
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;  /* 悬停时显示下划线 */
+  text-decoration-color: #111; 
+  color: #111;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.55em;
+  font-weight: bold;
+  margin-right: 40px;
+  color: #111;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-logo-icon {
+  width: 32px;   
+  height: 32px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+#lang-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 6px 18px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#lang-btn:hover {
+  background: #0078ff;
+  color: #fff;
+}
+
+.lang-btn {
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 18px;
+  padding: 6px 18px;
+  width: 70px;
+  height: 36px;
+  text-align: center;   
+  font-size: 0.5em;
+  margin-left: 10px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  opacity: 1;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* 响应式设计 */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nav-left {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  .nav-menu {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .nav-menu li {
+    margin: 0 10px;
+  }
+  
+  .nav-menu a {
+    font-size: 1.2em;
+    padding: 5px 10px;
+  }
+  
+  .nav-right {
+    justify-content: center;
+  }
+  
+  #lang-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 15px;
+  }
+  
+  .nav-logo {
+    font-size: 1em;
+  }
+  
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .nav-menu li {
+    margin: 0 5px;
+  }
+  
+  .nav-menu a {
+    font-size: 1em;
+    padding: 3px 8px;
+  }
+  
+  .lang-btn {
+    width: 60px;
+    height: 32px;
+    font-size: 0.4em;
+  }
+}
+
+/* 平板端响应式 */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 30px 30px;
+  }
+  
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .nav-menu li {
+    margin: 0 15px;
+  }
+}
+
+/* 手机端响应式 */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 20px 15px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nav-left {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .nav-logo {
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+  
+  .nav-menu {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .nav-menu li {
+    margin: 0 8px;
+  }
+  
+  .nav-menu a {
+    font-size: 1.1em;
+    padding: 4px 8px;
+  }
+  
+  .nav-right {
+    justify-content: center;
+  }
+  
+  .lang-btn {
+    width: 65px;
+    height: 34px;
+    font-size: 0.45em;
+  }
+}

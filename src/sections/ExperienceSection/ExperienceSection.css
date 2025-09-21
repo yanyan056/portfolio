@@ -1,0 +1,207 @@
+.exp-list {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+
+.exp-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; 
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.exp-content-wrapper {
+  display: flex;
+  width: auto; 
+  max-width: 100%; 
+  margin: 0 auto; 
+}
+
+.exp-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  color: #fff;
+  padding: 28px 20px 28px 0px;
+  width: 370px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.exp-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.exp-type-row {
+  color: #fff;
+  opacity: 0.7; 
+}
+
+.exp-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #222;
+}
+
+.exp-title {
+  font-size: 1.25em;      
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.exp-info-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #fff;
+  opacity: 0.7; 
+}
+
+.exp-identity, .exp-time {
+  font-size: 1em;         
+  color: inherit;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.exp-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; 
+  color: #fff;   
+  opacity: 0.7; 
+  padding: 15px 15px;
+  box-sizing: border-box;
+  margin-left: 60px;
+}
+
+.exp-desc {
+  color: #eee;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: left; 
+  white-space: pre-line;
+  text-align-last: left;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .exp-list {
+    max-width: 100%;
+    margin: 30px auto 0 auto;
+    padding: 0 20px;
+  }
+  
+.exp-content-wrapper {
+    max-width: 90%; 
+  }
+
+  .exp-left {
+    width: 280px;
+    padding: 24px 16px 24px 0px;
+  }
+  
+  .exp-right {
+    padding: 24px 20px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .exp-list {
+    padding: 0 15px;
+    gap: 30px;
+  }
+  
+  .exp-row {
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .exp-content-wrapper {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .exp-left {
+    width: 100% !important;
+    min-width: auto !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    border-radius: 14px; 
+    align-items: flex-start; 
+    text-align: left;
+  }
+  
+  .exp-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    border-radius: 14px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    justify-content: flex-start; 
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .exp-title-row {
+    justify-content: flex-start;
+  }
+  
+  .exp-info-row {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .exp-desc {
+    max-width: 100%;
+    line-height: 1.6;
+    text-align: left; 
+  }
+  
+  .exp-type-row,
+  .exp-identity, 
+  .exp-time {
+    text-align: left;
+  }
+}
+
+.exp-row > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.exp-title,
+.exp-desc,
+.exp-identity,
+.exp-time {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
